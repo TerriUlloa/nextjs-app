@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    Globalheaders: async () => {
+    headers: async () => {
         return [
             {
                 source: '/:slug*',
-                Globalheaders: [
+                headers: [
                     {
                         key: 'Strict-Transport-Security',
                         value: 'max-age=63072000; includeSubDomains; preload'
@@ -37,5 +37,5 @@ const nextConfig = {
 }
 
 module.exports = {
-    output: "standalone", nextConfig
+    output: "standalone", nextConfig,
 }
