@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+    enabled: process.env.ANALYZE === "true",
+});
 const nextConfig = {
     reactStrictMode: true,
     headers: async () => {
@@ -36,6 +39,4 @@ const nextConfig = {
      }
 }
 
-module.exports = {
-    output: "standalone", nextConfig,
-}
+module.exports = withBundleAnalyzer(nextConfig);
