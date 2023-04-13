@@ -39,5 +39,5 @@ const nextConfig = {
      }
 }
 module.exports = {
-    output: "standalone", withBundleAnalyzer(nextConfig),
+    output: "standalone", withBundleAnalyzer(nextConfig)
 };
