@@ -5,7 +5,7 @@ const nextConfig = {
         return [
             {
                 source: '/:slug*',
-                headers: [
+                Globalheaders: [
                     {
                         key: 'Strict-Transport-Security',
                         value: 'max-age=63072000; includeSubDomains; preload'
